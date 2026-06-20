@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gstefani <gstefani@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/26 11:20:52 by gstefani          #+#    #+#             */
-/*   Updated: 2026/05/26 11:20:52 by gstefani         ###   ########.fr       */
+/*   Created: 2026/05/28 22:21:40 by gstefani          #+#    #+#             */
+/*   Updated: 2026/05/28 22:21:40 by gstefani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	ft_strlen(const char *s)
+void	ft_bzero(void *s, size_t n)
 {
-	size_t	i;
+	char *str;
+	size_t i;
 
+	str = (char *)s;
 	i = 0;
-	while (s[i] != '\0')
+	while (i < n)
 	{
+		str[i] = '\0';
 		i++;
 	}
-	return (i);
+	
 }

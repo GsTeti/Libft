@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gstefani <gstefani@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/26 11:20:52 by gstefani          #+#    #+#             */
-/*   Updated: 2026/05/26 11:20:52 by gstefani         ###   ########.fr       */
+/*   Created: 2026/05/28 22:12:22 by gstefani          #+#    #+#             */
+/*   Updated: 2026/05/28 22:12:22 by gstefani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	ft_strlen(const char *s)
+int	ft_toupper(int c)
 {
-	size_t	i;
-
-	i = 0;
-	while (s[i] != '\0')
+	if (c >= 'a' && c <= 'z')
 	{
-		i++;
+		return (c - 32);
 	}
-	return (i);
+	else
+	{
+		return c;
+	}
 }

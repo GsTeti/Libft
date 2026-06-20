@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gstefani <gstefani@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/26 11:20:52 by gstefani          #+#    #+#             */
-/*   Updated: 2026/05/26 11:20:52 by gstefani         ###   ########.fr       */
+/*   Created: 2026/06/04 17:43:43 by gstefani          #+#    #+#             */
+/*   Updated: 2026/06/04 17:43:43 by gstefani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	ft_strlen(const char *s)
+char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
+	int i;
 
-	i = 0;
-	while (s[i] != '\0')
+	if(s == NULL)
 	{
-		i++;
+		return (NULL);
 	}
-	return (i);
+	i = ft_strlen(s);
+	while(i >= 0)
+	{
+		if(s[i] == c)
+		{
+			return ((char *)&s[i]);
+		}
+		i--;
+	}
+	return (NULL);
 }
