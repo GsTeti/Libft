@@ -2,7 +2,7 @@
 
 Este repositório contém a minha implementação da **libft**, um projeto focado em recriar funções essenciais da biblioteca padrão do C (`libc`). O objetivo principal é consolidar conceitos fundamentais de lógica de programação de baixo nível, manipulação de ponteiros, strings e gerenciamento manual de memória.
 
-## 🛠️ Funções Implementadas
+## Funções Implementadas
 
 O repositório conta com as seguintes funções desenvolvidas e estruturadas:
 
